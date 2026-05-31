@@ -1,0 +1,129 @@
+{
+  "model": "GraphGPS",
+  "config": {
+    "hidden_dim": 64,
+    "gps_layers": 4,
+    "heads": 4,
+    "dropout": 0.1,
+    "rwse_walk_length": 20,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "batch_size": 16,
+    "epochs": 100,
+    "target_mode": "hybrid_log1p",
+    "machine_loss_weight": 0.2,
+    "early_stopping_patience": 15
+  },
+  "training": {
+    "best_epoch": 23,
+    "best_validation_loss": 0.45374658703804016,
+    "device": "cuda",
+    "parameters": 223367
+  },
+  "results": {
+    "train": {
+      "kpi_regression": {
+        "makespan": {
+          "mae": 21.805373045965638,
+          "rmse": 28.012346774352018,
+          "r2": 0.8180001317548498
+        },
+        "mean_flow_time": {
+          "mae": 33.05148587115555,
+          "rmse": 42.560194516974,
+          "r2": -1.0665858061063318
+        },
+        "mean_queue_wait_time": {
+          "mae": 5.222112259183748,
+          "rmse": 6.641751672796025,
+          "r2": -1.0341628785261832
+        },
+        "mean_tardiness": {
+          "mae": 27.328624970015706,
+          "rmse": 35.140007682566015,
+          "r2": -1.0781238574244618
+        },
+        "throughput": {
+          "mae": 0.0073639951105128635,
+          "rmse": 0.009425320557596291,
+          "r2": 0.882863713064302
+        }
+      }
+    },
+    "validation": {
+      "kpi_regression": {
+        "makespan": {
+          "mae": 17.188909814716727,
+          "rmse": 21.636069327955532,
+          "r2": 0.9008150074461293
+        },
+        "mean_flow_time": {
+          "mae": 5.921346427367561,
+          "rmse": 7.550244431193778,
+          "r2": 0.9242338429660967
+        },
+        "mean_queue_wait_time": {
+          "mae": 1.068377093467632,
+          "rmse": 1.3918708991848914,
+          "r2": 0.9068662359697971
+        },
+        "mean_tardiness": {
+          "mae": 5.276855088680524,
+          "rmse": 7.229729952754266,
+          "r2": 0.897826612232517
+        },
+        "throughput": {
+          "mae": 0.008274865757356064,
+          "rmse": 0.01047385757896971,
+          "r2": 0.8961239949565856
+        }
+      }
+    },
+    "test": {
+      "kpi_regression": {
+        "makespan": {
+          "mae": 22.388455813265995,
+          "rmse": 26.423653134584217,
+          "r2": 0.8360777381218235
+        },
+        "mean_flow_time": {
+          "mae": 9.75853429897853,
+          "rmse": 11.060307100560484,
+          "r2": 0.7004148010622635
+        },
+        "mean_queue_wait_time": {
+          "mae": 1.2604603251266309,
+          "rmse": 1.7329972152213335,
+          "r2": 0.7436413106997857
+        },
+        "mean_tardiness": {
+          "mae": 6.278794430465974,
+          "rmse": 8.169289772773244,
+          "r2": 0.7793918313778028
+        },
+        "throughput": {
+          "mae": 0.013646413084241147,
+          "rmse": 0.016409996245996882,
+          "r2": 0.7955429039154309
+        }
+      }
+    }
+  },
+  "baseline_comparison": {
+    "note": "OOD test R2 targets to beat from TransformerConv model",
+    "baseline": {
+      "makespan": 0.8,
+      "mean_flow_time": 0.12,
+      "mean_queue_wait_time": 0.37,
+      "mean_tardiness": 0.21,
+      "throughput": 0.77
+    },
+    "gps_test": {
+      "makespan": 0.8360777381218235,
+      "throughput": 0.7955429039154309,
+      "mean_flow_time": 0.7004148010622635,
+      "mean_tardiness": 0.7793918313778028,
+      "mean_queue_wait_time": 0.7436413106997857
+    }
+  }
+}

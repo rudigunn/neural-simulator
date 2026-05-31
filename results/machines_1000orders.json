@@ -1,0 +1,55 @@
+{
+  "config": {
+    "fixed_orders": 1000,
+    "n_per_scale": 8,
+    "batch_size": 16,
+    "device": "cuda"
+  },
+  "speed": {
+    "20m/1000o": {
+      "sim_ms": 158.651,
+      "convert_ms": 283.524,
+      "rwse_ms": 0.0,
+      "infer_ms": 41.727,
+      "surrogate_total_ms": 325.25,
+      "speedup_total": 0.49,
+      "speedup_infer_only": 3.8
+    },
+    "40m/1000o": {
+      "sim_ms": 188.716,
+      "convert_ms": 318.567,
+      "rwse_ms": 0.0,
+      "infer_ms": 41.935,
+      "surrogate_total_ms": 360.502,
+      "speedup_total": 0.52,
+      "speedup_infer_only": 4.5
+    },
+    "60m/1000o": {
+      "sim_ms": 183.729,
+      "convert_ms": 273.666,
+      "rwse_ms": 0.0,
+      "infer_ms": 41.598,
+      "surrogate_total_ms": 315.264,
+      "speedup_total": 0.58,
+      "speedup_infer_only": 4.42
+    },
+    "80m/1000o": {
+      "sim_ms": 198.123,
+      "convert_ms": 265.913,
+      "rwse_ms": 0.0,
+      "infer_ms": 45.991,
+      "surrogate_total_ms": 311.904,
+      "speedup_total": 0.64,
+      "speedup_infer_only": 4.31
+    },
+    "100m/1000o": {
+      "sim_ms": 202.891,
+      "convert_ms": 253.861,
+      "rwse_ms": 0.0,
+      "infer_ms": 47.631,
+      "surrogate_total_ms": 301.492,
+      "speedup_total": 0.67,
+      "speedup_infer_only": 4.26
+    }
+  }
+}

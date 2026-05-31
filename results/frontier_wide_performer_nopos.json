@@ -1,0 +1,126 @@
+{
+  "config": {
+    "attn_type": "performer",
+    "rwse_dim": 0,
+    "hidden_dim": 64,
+    "gps_layers": 4,
+    "train_file": "data\\frontier\\train_wide.jsonl",
+    "params": 417927,
+    "train_time_s": 520.1
+  },
+  "ood_generalization": {
+    "test_20": {
+      "makespan": {
+        "r2": 0.6702,
+        "mae": 19.8618
+      },
+      "throughput": {
+        "r2": 0.7344,
+        "mae": 0.0168
+      },
+      "mean_flow_time": {
+        "r2": 0.9287,
+        "mae": 3.4689
+      },
+      "mean_tardiness": {
+        "r2": 0.9056,
+        "mae": 3.6049
+      },
+      "mean_queue_wait_time": {
+        "r2": 0.9339,
+        "mae": 0.7532
+      }
+    },
+    "test_30": {
+      "makespan": {
+        "r2": 0.4506,
+        "mae": 32.7343
+      },
+      "throughput": {
+        "r2": 0.4817,
+        "mae": 0.0387
+      },
+      "mean_flow_time": {
+        "r2": 0.8885,
+        "mae": 3.8716
+      },
+      "mean_tardiness": {
+        "r2": 0.8503,
+        "mae": 3.9137
+      },
+      "mean_queue_wait_time": {
+        "r2": 0.8765,
+        "mae": 0.8984
+      }
+    },
+    "test_45": {
+      "makespan": {
+        "r2": 0.0283,
+        "mae": 39.7783
+      },
+      "throughput": {
+        "r2": -0.3098,
+        "mae": 0.0811
+      },
+      "mean_flow_time": {
+        "r2": 0.385,
+        "mae": 8.869
+      },
+      "mean_tardiness": {
+        "r2": 0.5428,
+        "mae": 6.9639
+      },
+      "mean_queue_wait_time": {
+        "r2": 0.2751,
+        "mae": 2.3167
+      }
+    }
+  },
+  "speed": {
+    "20m/80o": {
+      "sim_ms": 10.087,
+      "convert_ms": 15.416,
+      "rwse_ms": 0.0,
+      "infer_ms": 3.859,
+      "surrogate_total_ms": 19.275,
+      "speedup_total": 0.52,
+      "speedup_infer_only": 2.61
+    },
+    "30m/120o": {
+      "sim_ms": 16.139,
+      "convert_ms": 23.217,
+      "rwse_ms": 0.0,
+      "infer_ms": 7.36,
+      "surrogate_total_ms": 30.577,
+      "speedup_total": 0.53,
+      "speedup_infer_only": 2.19
+    },
+    "45m/180o": {
+      "sim_ms": 26.512,
+      "convert_ms": 42.409,
+      "rwse_ms": 0.0,
+      "infer_ms": 7.829,
+      "surrogate_total_ms": 50.237,
+      "speedup_total": 0.53,
+      "speedup_infer_only": 3.39
+    },
+    "60m/240o": {
+      "sim_ms": 36.353,
+      "convert_ms": 61.446,
+      "rwse_ms": 0.0,
+      "infer_ms": 9.799,
+      "surrogate_total_ms": 71.245,
+      "speedup_total": 0.51,
+      "speedup_infer_only": 3.71
+    },
+    "100m/400o": {
+      "sim_ms": 73.907,
+      "convert_ms": 104.231,
+      "rwse_ms": 0.0,
+      "infer_ms": 15.335,
+      "surrogate_total_ms": 119.566,
+      "speedup_total": 0.62,
+      "speedup_infer_only": 4.82
+    }
+  }
+}

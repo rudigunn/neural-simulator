@@ -1,0 +1,68 @@
+{
+  "machines": [
+    {
+      "capacity": 1,
+      "machine_id": "M0",
+      "processing_time_by_product_type": {
+        "A": 1.2,
+        "B": 1.6
+      },
+      "speed": 1.0
+    },
+    {
+      "capacity": 1,
+      "machine_id": "M1",
+      "processing_time_by_product_type": {
+        "A": 1.8,
+        "B": 1.1
+      },
+      "speed": 1.15
+    },
+    {
+      "capacity": 1,
+      "machine_id": "M2",
+      "processing_time_by_product_type": {
+        "A": 1.4,
+        "B": 1.7
+      },
+      "speed": 0.95
+    }
+  ],
+  "orders": [
+    {
+      "due_date": 24.0,
+      "order_id": "O0",
+      "product_type": "A",
+      "quantity": 4.0,
+      "release_time": 0.0,
+      "route": [
+        "M0",
+        "M1"
+      ]
+    },
+    {
+      "due_date": 27.0,
+      "order_id": "O1",
+      "product_type": "B",
+      "quantity": 6.0,
+      "release_time": 2.0,
+      "route": [
+        "M0",
+        "M2"
+      ]
+    },
+    {
+      "due_date": 35.0,
+      "order_id": "O2",
+      "product_type": "A",
+      "quantity": 5.0,
+      "release_time": 4.0,
+      "route": [
+        "M1",
+        "M2"
+      ]
+    }
+  ],
+  "scenario_id": "example-scenario",
+  "seed": 101
+}

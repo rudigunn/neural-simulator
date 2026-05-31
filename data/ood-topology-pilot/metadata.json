@@ -1,0 +1,68 @@
+{
+  "kind": "hard_topology_holdout",
+  "observed_machine_counts": {
+    "test": [
+      20
+    ],
+    "train": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "validation": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "observed_route_stats": {
+    "test": {
+      "max_route_length": 8.0,
+      "mean_route_length": 4.959791666666667,
+      "reentrant_route_share": 0.2940625
+    },
+    "train": {
+      "max_route_length": 8.0,
+      "mean_route_length": 4.981323431611616,
+      "reentrant_route_share": 0.37009532254489025
+    },
+    "validation": {
+      "max_route_length": 8.0,
+      "mean_route_length": 5.0006207324643075,
+      "reentrant_route_share": 0.29919304779639977
+    }
+  },
+  "orders_per_machine": 4,
+  "route_complexity": {
+    "max_route_length": 8,
+    "min_route_length": 2,
+    "reentrant_route_probability": 0.35,
+    "route_shuffle_probability": 0.5,
+    "wide_input_buffers": true
+  },
+  "seed": 52,
+  "split_counts": {
+    "test": 120,
+    "train": 600,
+    "validation": 120
+  },
+  "test_machine_count": 20,
+  "train_machine_counts": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "validation_machine_counts": [
+    12,
+    13,
+    14,
+    15
+  ]
+}

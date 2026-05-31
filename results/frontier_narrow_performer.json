@@ -1,0 +1,80 @@
+{
+  "config": {
+    "attn_type": "performer",
+    "rwse_dim": 0,
+    "hidden_dim": 64,
+    "gps_layers": 4,
+    "train_file": "data\\frontier\\train_narrow.jsonl",
+    "params": 417927,
+    "train_time_s": 109.8
+  },
+  "ood_generalization": {
+    "test_20": {
+      "makespan": {
+        "r2": 0.1651,
+        "mae": 33.6842
+      },
+      "throughput": {
+        "r2": 0.4688,
+        "mae": 0.0248
+      },
+      "mean_flow_time": {
+        "r2": 0.6939,
+        "mae": 8.1269
+      },
+      "mean_tardiness": {
+        "r2": 0.8202,
+        "mae": 4.7433
+      },
+      "mean_queue_wait_time": {
+        "r2": 0.6953,
+        "mae": 1.7375
+      }
+    },
+    "test_30": {
+      "makespan": {
+        "r2": 0.2753,
+        "mae": 36.1168
+      },
+      "throughput": {
+        "r2": 0.3594,
+        "mae": 0.0398
+      },
+      "mean_flow_time": {
+        "r2": -3.1995,
+        "mae": 27.9437
+      },
+      "mean_tardiness": {
+        "r2": 0.5531,
+        "mae": 7.2183
+      },
+      "mean_queue_wait_time": {
+        "r2": -1.1073,
+        "mae": 4.3347
+      }
+    },
+    "test_45": {
+      "makespan": {
+        "r2": 0.1176,
+        "mae": 35.4082
+      },
+      "throughput": {
+        "r2": 0.1456,
+        "mae": 0.0625
+      },
+      "mean_flow_time": {
+        "r2": -13.7642,
+        "mae": 48.9808
+      },
+      "mean_tardiness": {
+        "r2": 0.2668,
+        "mae": 8.5757
+      },
+      "mean_queue_wait_time": {
+        "r2": -4.87,
+        "mae": 7.3556
+      }
+    }
+  },
+  "speed": {}
+}

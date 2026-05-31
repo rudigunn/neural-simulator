@@ -1,0 +1,106 @@
+{
+  "model": "multiscale_pool_set2set",
+  "architecture": {
+    "message_passing": "GATv2Conv",
+    "pooling": "Set2Set (processing_steps=6)",
+    "readout": "multi-scale type-aware + intermediate layer pooling",
+    "hidden_dim": 96,
+    "layers": 3,
+    "heads": 4,
+    "dropout": 0.15
+  },
+  "training": {
+    "epochs_completed": 64,
+    "best_epoch": 24,
+    "best_validation_loss": 0.22954378525416055,
+    "stopped_early": true,
+    "training_seconds": 443.13491797447205,
+    "device": "cuda",
+    "target_mode": "hybrid_log1p",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.05,
+    "batch_size": 16
+  },
+  "test_results": {
+    "makespan": {
+      "mae": 23.103918607554935,
+      "rmse": 27.8679123178541,
+      "r2": 0.8176687583436621
+    },
+    "throughput": {
+      "mae": 0.01428596993495809,
+      "rmse": 0.017162584772336207,
+      "r2": 0.7763594170841294
+    },
+    "mean_flow_time": {
+      "mae": 9.043620714687615,
+      "rmse": 12.077527234575403,
+      "r2": 0.6427748456047211
+    },
+    "mean_tardiness": {
+      "mae": 8.576523341169755,
+      "rmse": 11.069456637499037,
+      "r2": 0.5949528379421721
+    },
+    "mean_queue_wait_time": {
+      "mae": 2.0730304189361632,
+      "rmse": 2.439163342441935,
+      "r2": 0.4921516078553909
+    }
+  },
+  "validation_results": {
+    "makespan": {
+      "mae": 17.640715717488394,
+      "rmse": 22.737287981878005,
+      "r2": 0.8904615575855057
+    },
+    "throughput": {
+      "mae": 0.008565963364213272,
+      "rmse": 0.010909889260011048,
+      "r2": 0.8872951526502076
+    },
+    "mean_flow_time": {
+      "mae": 8.617073619863778,
+      "rmse": 11.302078577354205,
+      "r2": 0.8302265081443609
+    },
+    "mean_tardiness": {
+      "mae": 7.615524670510753,
+      "rmse": 10.310303200269827,
+      "r2": 0.7922043192070497
+    },
+    "mean_queue_wait_time": {
+      "mae": 1.524907238288133,
+      "rmse": 2.074312357026043,
+      "r2": 0.7931490333213953
+    }
+  },
+  "baseline_comparison": {
+    "makespan": {
+      "baseline_r2": 0.8,
+      "multiscale_r2": 0.8176687583436621,
+      "improvement": 0.017668758343662105
+    },
+    "throughput": {
+      "baseline_r2": 0.77,
+      "multiscale_r2": 0.7763594170841294,
+      "improvement": 0.0063594170841293485
+    },
+    "mean_flow_time": {
+      "baseline_r2": 0.12,
+      "multiscale_r2": 0.6427748456047211,
+      "improvement": 0.5227748456047211
+    },
+    "mean_tardiness": {
+      "baseline_r2": 0.21,
+      "multiscale_r2": 0.5949528379421721,
+      "improvement": 0.38495283794217217
+    },
+    "mean_queue_wait_time": {
+      "baseline_r2": 0.37,
+      "multiscale_r2": 0.4921516078553909,
+      "improvement": 0.12215160785539092
+    }
+  },
+  "checkpoint_path": "checkpoints\\multiscale_pool.pt"
+}
