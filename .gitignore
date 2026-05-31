@@ -12,8 +12,6 @@ build/
 dist/
 *.egg-info/
 
-/data/**/*.jsonl
-
 /runs/
 /checkpoints/
 *.pt
